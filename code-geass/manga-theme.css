@@ -1,0 +1,294 @@
+/* ================== FONTS IMPORTS ================ */
+@import "http://fonts.googleapis.com/css?family=Patrick+Hand+SC";
+
+/* =============== UNIVERSAL SELECTOR ==============
+don't mess with this code unless you know what you are doing */
+* {
+        font-family             : 'Patrick Hand SC' !important;
+        text-decoration : none !important;
+}
+
+/* =================== BACKGROUND ================== */
+body {
+        background-image      : url("http://i.imgur.com/hCVyw.jpg");
+        background-position   : center center !important;
+        background-attachment : fixed;
+        background-size       : cover;
+}
+
+/* ============= CATEGORY HEADER IMAGES ============ */
+.header_cw {
+        background-image: url("http://i.imgur.com/UsaDdf7.png"); /* Currently Reading */
+}
+.header_completed {
+        background-image: url("http://i.imgur.com/39z1Ya4.png"); /* Completed */
+}
+.header_onhold {
+        background-image: url("http://i.imgur.com/cwVeBGD.png"); /* On Hold */
+}
+.header_dropped {
+        background-image: url("http://i.imgur.com/i98YjVu.png"); /* Dropped */
+}
+.header_ptw {
+        background-image: url("http://i.imgur.com/fjnEB4U.png"); /* Plan to Read */
+}
+
+/* ================= TEXT AND LINKS ================ */
+a, a:visited, .td1, .td2, .table_header:first-of-type {
+        color                   : #90ee90;
+        font-family     : inherit !important;
+}
+
+.animetitle, .animetitle:visited {
+        color : #00ff00;
+}
+
+.animetitle + small {
+        color           : #ffffff;
+        font-weight : bold;
+        text-shadow : 1px 1px 6px #000000;
+}
+
+/* ================= LINE HIGHLIGHT ================ */
+tr:hover [class^=td] {
+        background-color   : rgba(0, 255, 0, 0.75);
+        text-shadow        : 1px 1px 2px #ffffff;
+        /* animation */
+        transition         : .4s ease;
+        -webkit-transition : .4s ease;
+        -moz-transition    : .4s ease;
+        -ms-transition     : .4s ease;
+        -o-transition      : .4s ease;
+}
+tr:hover td.td1, tr:hover td.td2, tr:hover td.td1 a, tr:hover td.td2 a {
+        color : #ffffff !important;
+        text-shadow        : 1px 1px 2px #ffffff;
+        /* animation */
+        transition         : .4s ease;
+        -webkit-transition : .4s ease;
+        -moz-transition    : .4s ease;
+        -ms-transition     : .4s ease;
+        -o-transition      : .4s ease;
+}
+
+/* =============== CATEGORY LINK MENU ============== */
+#list_surround .status_selected:nth-of-type(1), #list_surround .status_not_selected:nth-of-type(1) {
+        background-image: url("http://i.imgur.com/GndK1hc.png"); /* Currently Reading */
+        top: 15%;
+}
+#list_surround .status_selected:nth-of-type(2), #list_surround .status_not_selected:nth-of-type(2) {
+        background-image: url("http://i.imgur.com/ouRayl5.png"); /* Completed */
+        top: calc(15% + 102px);
+}
+#list_surround .status_selected:nth-of-type(3), #list_surround .status_not_selected:nth-of-type(3) {
+        background-image: url("http://i.imgur.com/cCyAz2K.png"); /* On Hold */
+        top: calc(15% + 204px);
+}
+#list_surround .status_selected:nth-of-type(4), #list_surround .status_not_selected:nth-of-type(4) {
+        background-image: url("http://i.imgur.com/UPNlm7n.png"); /* Dropped */
+        top: calc(15% + 306px);
+}
+#list_surround .status_selected:nth-of-type(5), #list_surround .status_not_selected:nth-of-type(5) {
+        background-image: url("http://i.imgur.com/Vu2Jnhk.png"); /* Plan to Read */
+        top: calc(15% + 408px);
+}
+#list_surround .status_selected:nth-of-type(6), #list_surround .status_not_selected:nth-of-type(6) {
+        background-image: url("http://i.imgur.com/LT5WG7v.png"); /* All Manga */
+        top: calc(15% + 510px);
+}
+
+/* ============ CATEGORY HEADER SETTINGS =========== */
+[class^="header_"] * {
+        /* text */
+        font-size               : 0px;
+        text-align              : left;
+        vertical-align  : bottom;
+        /* spacing */
+        padding-bottom  : 0;
+        margin-top              : 46px;
+        /* size */
+        line-height             : 24px;
+        height                  : 245px;
+        width                   : 450px;
+}
+
+.header_cw, .header_completed, .header_onhold, .header_dropped, .header_ptw {
+        /* background settings */
+        background-color        : transparent;
+        background-position     : 50% 2px;
+        background-repeat       : no-repeat no-repeat;
+        /* position */
+        margin-bottom           : -44px;
+        /* size */
+        height                          : 200px;
+}
+
+/* ============= CATEGORY MENU SETTINGS ============ */
+#list_surround .status_selected, #list_surround .status_not_selected {
+        display                   : block;
+        /* background settings */
+        background-repeat : no-repeat;
+        /* border */
+        border-style      : solid;
+        border-width      : 3px;
+        border-color      : #00ff00;
+        /* size */
+        height                    : 100px;
+        width                     : 300px;
+        /* position */
+        position                  : fixed;
+}
+
+#list_surround .status_selected a, #list_surround .status_not_selected a {
+        display         : block;
+        /* font */
+        font-family : Manzanita;
+        font-size       : 0;
+        font-weight : lighter;
+        color           : transparent;
+        /* spacing */
+        padding         : 100px 0 0 300px;
+        /* size */
+        height          : 0;
+        width           : 0;
+}
+#list_surround .status_selected {
+        /* background */
+        background-color : rgba(50, 150, 50, 0.75);
+        /* border */
+        border-radius    : 0 25px 25px 0;
+        /* position */
+        left                     : 0;
+}
+
+#list_surround .status_not_selected {
+        /* background */
+        background-color : rgba(0, 100, 0, 0.75);
+        /* opacity */
+        opacity                    : 0.75;
+        /* position */
+        left                       : -95px;
+        /* animation */
+        transition         : .4s ease;
+        -webkit-transition : .4s ease;
+        -moz-transition    : .4s ease;
+        -ms-transition     : .4s ease;
+        -o-transition      : .4s ease;
+}
+
+#list_surround .status_not_selected:hover {
+        /* background */
+        background-color : rgba(0, 100, 0, 0.75);
+        /* opacity */
+        opacity                    : 1;
+        /* border */
+        border-radius      : 0 25px 25px 0 !important;
+        /* position */
+        left                       : -8px;
+        /* animation */
+        transition         : .4s ease;
+        -webkit-transition : .4s ease;
+        -moz-transition    : .4s ease;
+        -ms-transition     : .4s ease;
+        -o-transition      : .4s ease;
+}
+
+#list_surround .status_not_selected:nth-of-type(1) {
+        border-radius : 0 25px 0 0;
+}
+#list_surround .status_not_selected:nth-of-type(6)  {
+        border-radius : 0 0 25px 0;
+}
+
+/* ================= TABLE SETTINGS ================ */
+.td1:nth-of-type(2), .td2:nth-of-type(2) {
+        text-align : left;
+}
+/* table corners */
+.table_header:first-of-type {
+        border-radius : 20px 0 0 0;
+}
+.table_header:nth-of-type(5) {
+        border-radius : 0 20px 0 0;
+}
+.table_header:nth-of-type(6) {
+        display : none;
+}
+td:nth-of-type(6) {
+        display : none;
+}
+/* table */
+#list_surround {
+        /* font */
+        font-size                       : 16px;
+        /* spacing */
+        padding-bottom          : 0;
+        padding-top                     : 175px;
+        /* size */
+        width                           : 650px;
+        /* position */
+        position                        : absolute;
+        margin                          : 0 auto;
+        right                           : 7% !important;
+        top                                     : 44px;
+        z-index                         : 5;
+}
+/* table cell spacing */
+[cellspacing="0"] {
+        line-height : 17px;
+}
+/* table lines/table header/totals */
+.table_header, .td1, .td2, .category_totals, #grand_totals {
+        /* background */
+        background-color : rgba(0, 100, 0, 0.75);
+        /* border */
+        border                   : none;
+        /* spacing */
+        padding                  : 4px;
+        /* text */
+        color                    : #ffffff;
+        text-align               : center;
+        vertical-align   : top;
+}
+.category_totals {
+        /* background */
+        background-color : rgba(120, 200, 50, 0.75);
+        /* border */
+        border-radius    : 0 0 12px 12px;
+}
+#grand_totals, #copyright {
+        /* border */
+        border-radius    : 12px 12px 12px 12px;
+        /* text */
+        color                    : #ffffff;
+        text-align       : center;
+        vertical-align   : middle !important;
+        /* spacing */
+        padding          : 8px !important;
+        /* size */
+        line-height      : 20px;
+        min-height       : 20px;
+}
+#copyright {
+        background-color : rgba(0, 100, 0, 0.75);
+}
+#copyright::before {
+        color   : #00ff00;
+        content : "Design by Miketsukami-kun.";
+}
+.category_totals:hover, #grand_totals:hover {
+    background-color : rgba(0, 255, 0, 0.75); /* totals highlight line color */
+    text-shadow          : 1px 1px 2px #ffffff;
+}
+
+/* ================ TOP BAR SETTINGS =============== */
+#mal\_control\_strip {
+        background : linear-gradient(rgba(0, 100, 0, 0.85), rgba(0, 200, 0, 0.95)) !important;
+        background : -moz-linear-gradient(rgba(0, 100, 0, 0.85), rgba(0, 200, 0, 0.95)) !important;
+        background : -webkit-linear-gradient(rgba(0, 100, 0, 0.85), rgba(0, 200, 0, 0.95)) !important;
+        background : -o-linear-gradient(rgba(0, 100, 0, 0.85), rgba(0, 200, 0, 0.95)) !important;
+        background : -ms-linear-gradient(rgba(0, 100, 0, 0.85), rgba(0, 200, 0, 0.95)) !important;
+        position   : fixed !important;
+        top        : 0 !important;
+        z-index    : 100;
+}
