@@ -1,0 +1,6 @@
+*-NFP-*
+*.nfp*
+*-WIP-*
+*.wip*
+*/resources.txt
+*/mockup.psd

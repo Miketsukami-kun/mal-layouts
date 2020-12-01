@@ -1,2 +1,29 @@
+###############################
+# Git Line Endings            #
+###############################
+
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Force gitignore and gitattributes files to use lf
+*.gitattributes text
+*.gitignore     text
+
+###############################
+# Git Large File System (LFS) #
+###############################
+
+# Images
+*.gif           filter=lfs merge=lfs -text
+*.jpeg          filter=lfs merge=lfs -text
+*.jpg           filter=lfs merge=lfs -text
+*.png           filter=lfs merge=lfs -text
+*.psd           filter=lfs merge=lfs -text
+
+###############################
+# Creating An Archive         #
+###############################
+
+# Files ignored when creating an archive
+*.gitattributes export-ignore
+*.gitignore     export-ignore
